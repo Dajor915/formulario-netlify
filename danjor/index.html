@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <img src="C:/Users/Dane/Documents/danjor/logo1.png" alt="Logo Danjor" class="logo"> <button onclick="mostrarPestaña(0)">¿QUIÉNES SOMOS?</button> <button onclick="mostrarPestaña(1)">VISA</button> <button onclick="mostrarPestaña(2)">PASAPORTE</button><button onclick="mostrarPestaña(3)">INICIAR SESION COMO ADMIN</button>
+  </nav>
+  <div class="contenedor">
+    <div class="pestaña">
+      <h2>Sobre Nosotros</h2>
+      <p>En Danjor nos especializamos en facilitar trámites de pasaporte mexicano y visas de turista de manera rápida, segura y eficiente.</p><br>
+      <p>Nuestro equipo cuenta con experiencia en el área, lo que nos permite ofrecerte un servicio personalizado, adaptado a tus necesidades. Nos enfocamos en simplificar los procesos burocráticos, para que tú te concentres en planear tu viaje o resolver cualquier situación que requiera tu documentación oficial.</p><br>
+      <h2>¿Por qué elegirnos?</h2>
+      <ul>
+        <li>Asesoría profesional: Te guiamos paso a paso en todo el proceso.</li>
+        <li>Ahorro de tiempo: Gestionamos los trámites de forma eficiente para evitar retrasos.</li>
+        <li>Confianza y seguridad: Tu información está protegida en todo momento.</li>
+        <li>Atención personalizada: Nos adaptamos a tus necesidades y te damos respuestas claras.</li>
+      </ul><br>
+      <br>
+      <p>En Danjor trabajamos con la misión de hacer más fácil tu vida al momento de tramitar documentos esenciales para ti y tu familia.</p>
+    </div>
+    <div class="pestaña">
+      <h2>VISA</h2>
+      <div class="boton-container">
+        <button onclick="mostrarSubFormulario(1)">REQUISITOS</button> <button onclick="mostrarSubFormulario(2)">FORMULARIO DS-160</button> <button onclick="mostrarSubFormulario(3)">EVALUACIÓN DE PERFIL</button>
+      </div>
+      <div class="formulario-container">
+        <form id="formVisa1" class="subform" name="formVisa1">
+          <h3>Requisitos</h3>
+          <ul>
+            <li>Pasaporte vigente</li>
+            <li>Tener un buen perfil</li>
+            <li>Confirmación DS-160</li>
+            <li>Hoja de cita</li>
+            <li>Hoja de pago</li>
+          </ul>
+        </form>
+        <form id="formVisa2" class="subform" name="formVisa2">
+          <h2>Formulario DS-160</h2>
+          <h3>Información Personal</h3><label for="nom">Nombre (tal y como aparece en su pasaporte mexicano):</label> <input type="text" id="nom" name="nom" required=""><br>
+          <br>
+          <label for="sexo">Sexo:</label> <select id="sexo" name="sexo" required="">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="Femenino" >
+              Femenino
+            </option>
+            <option value="Masculino">
+              Masculino
+            </option>
+          </select><br>
+          <br>
+          <label for="estadoc">Estado civil:</label> <select id="estadoc" name="estadoc" required="">
+            <option value="" disabled selected>
+             -- Seleccione una opcion --
+            </option>
+            <option value="Solter@" >
+              Solter@
+            </option>
+            <option value="Casad@">
+              Casad@
+            </option>
+          </select><br>
+          <br>
+          <label for="fechaNacimiento">Fecha de Nacimiento:</label> <input type="date" id="fechaNacimiento" name="fechaNacimiento" required=""><br>
+          <br>
+          <label for="lugarnac">Lugar de Nacimiento:</label> <input type="text" id="lugarnac" name="lugarnac" required=""><br>
+          <br>
+          <label for="ciudad">Ciudad:</label> <input type="text" id="ciudad" name="ciudad" required=""><br>
+          <br>
+          <label for="estado">Estado:</label> <input type="text" id="estado" name="estado" required=""><br>
+          <br>
+          <label for="pais">País:</label> <input type="text" id="pais" name="pais" required=""><br>
+          <br>
+          <label for="nacionalidad">Nacionalidad:</label> <input type="text" id="nacionalidad" name="nacionalidad" required=""><br>
+          <br>
+          <label for="otrasnacionalidad">Otras nacionalidades:</label> <input type="text" id="otrasnacionalidades" name="otrasnacionalidades" required=""><br>
+          <br>
+          <label for="cur">Número de identificación Nacional (CURP)</label> <input type="text" id="cur" name="cur" required=""><br>
+          <br>
+          <label for="numsoc">Núm. de Seguridad Social Estadounidense (si ha tenido)</label> <input type="text" id="numsocial" name="numsocial"><br>
+          <br>
+          <label for="numid">Núm. de identificación de Contribuyente Estadounidense (si ha tenido)</label> <input type="text" id="numid" name="numid"><br>
+          <br>
+          <h3>Dirección de su domicilio</h3><label for="direccion">Calle, Número, Colonia, Sector:</label> <input type="text" id="direccion" name="direccion" required=""><br>
+          <br>
+          <label for="municipio">Municipio / Ciudad:</label> <input type="text" id="municipio" name="municipio" required=""><br>
+          <br>
+          <label for="estadoDomicilio">Estado / Provincia:</label> <input type="text" id="estadoDomicilio" name="estadoDomicilio" required=""><br>
+          <br>
+          <label for="codigoPostal">Código Postal:</label> <input type="text" id="codigoPostal" name="codigoPostal" required=""><br>
+          <br>
+          <label for="telefonoPrimario">Número de teléfono primario:</label> <input type="tel" id="telefonoPrimario" name="telefonoPrimario" required=""><br>
+          <br>
+          <label for="telefonoSecundario">Número de teléfono secundario:</label> <input type="tel" id="telefonoSecundario" name="telefonoSecundario"><br>
+          <br>
+          <label for="telefonotrabajo">Número de teléfono del trabajo:</label> <input type="tel" id="telefonotrabajo" name="telefonotrabajo"><br>
+          <br>
+          <label for="telefonoadic">¿Ha utilizado números de teléfono adicionales en los últimos cinco años? Y cuales</label> <input type="tel" id="telefonoadicional" name="telefonoadicional"><br>
+          <br>
+          <label for="email">Correo electrónico actual:</label> <input type="email" id="email" name="email" required=""><br>
+          <br>
+          <label for="correoad">¿Ha utilizado direcciones de correo electrónico adicionales en los últimos cinco años? Y cuales</label> <input type="tel" id="correoadicional" name="correoadicional"><br>
+          <br>
+          <h3>Redes Sociales</h3><label for="facebook">Facebook:</label> <input type="text" id="facebook" name="facebook"><br>
+          <br>
+          <label for="instagram">Instagram:</label> <input type="text" id="instagram" name="instagram"><br>
+          <br>
+          <label for="twitter">Twitter:</label> <input type="text" id="twitter" name="twitter"><br>
+          <br>
+          <h3>Información de Pasaporte</h3><label for="pasaporteNumero">Número de Pasaporte Mexicano:</label> <input type="text" id="pasaporteNumero" name="pasaporteNumero" required=""><br>
+          <br>
+          <label for="pasaporteEmision">Fecha de emisión del pasaporte Mexicano:</label> <input type="date" id="pasaporteEmision" name="pasaporteEmision" required=""><br>
+          <br>
+          <label for="pasaporteVencimiento">Fecha de vencimiento del pasaporte Mexicano:</label> <input type="date" id="pasaporteVencimiento" name="pasaporteVencimiento" required=""><br>
+          <br>
+          <label for="pasaportepais">País que emitió su pasaporte mexicano:</label> <input type="text" id="paisemitio" name="paisemitio" required=""><br>
+          <br>
+          <label for="pasaporteciudad">Ciudad que emitió su pasaporte mexicano:</label> <input type="text" id="ciudademitio" name="ciudademitio" required=""><br>
+          <br>
+          <label for="pasaporteestado">Estado que emitió su pasaporte mexicano:</label> <input type="text" id="estadoemitio" name="estadoemitio" required=""><br>
+          <br>
+          <label for="pasaporteperdido">Alguna vez ha perdido un pasaporte o se lo han robado</label> <input type="text" id="pasrobo" name="pasrobo" required=""><br>
+          <br>
+          <h3>Información de Viaje</h3><label for="paisDestino">País de destino:</label> <input type="text" id="paisDestino" name="paisDestino" required=""><br>
+          <br>
+          <label for="proposito">Proposito de su viaje:</label> <input type="text" id="proposito" name="proposito" required=""><br>
+          <br>
+          <label for="fechaViaje">Fecha de llegada a los Estados Unidos:</label> <input type="date" id="fechaViaje" name="fechaViaje" required=""><br>
+          <br>
+          <label for="ciudadDestino">Ciudad de llegada:</label> <input type="text" id="ciudadDestino" name="ciudadDestino" required=""><br>
+          <br>
+          <label for="duracion">Cuántos días planea estar en EU:</label> <input type="number" id="duracion" name="duracion" required=""><br>
+          <br>
+          <label for="direccionEstancia">Dirección donde se quedará en Estados Unidos:</label> <input type="text" id="direccionEstancia" name="direccionEstancia" required=""><br>
+          <br>
+          <h3>Información de Contacto en EE.UU.</h3><label for="nombrecont">Nombre del contacto en EE.UU.:</label> <input type="text" id="nombrecont" name="nombrecont" required=""><br>
+          <br>
+          <label for="relacionContacto">Relación con el contacto en EE.UU.:</label> <input type="text" id="relacionContacto" name="relacionContacto" required=""><br>
+          <br>
+          <label for="telefonocon">Número telefónico del contacto:</label> <input type="tel" id="telefonocon" name="telefonocon" required=""><br>
+          <br>
+          <label for="emailContacto">Correo electrónico del contacto:</label> <input type="email" id="emailContacto" name="emailContacto" required=""><br>
+          <br>
+          <label for="estatus">Estatus migratorio de la persona contacto en EU (residente, ciudadano, indocumentado, no inmigrante, otro)</label> <input type="email" id="situContacto" name="situContacto" required=""><br>
+          <br>
+          <h3>Información Familiar</h3><label for="apellidosPadre">Apellidos de su Padre:</label><br>
+          <input type="text" id="apellidosPadre" name="apellidosPadre" required=""><br>
+          <br>
+          <label for="nombresPadre">Nombre(s) de su Padre:</label><br>
+          <input type="text" id="nombresPadre" name="nombresPadre" required=""><br>
+          <br>
+          <label for="fechanac">Fecha de nacimiento de su Padre:</label><br>
+          <input type="date" id="fechanac" name="fechanac" required=""><br>
+          <br>
+          <label for="enEstadosUnidos">¿Se encuentra su Padre en Estados Unidos?</label><br>
+          <select id="enEstadosUnidos" name="enEstadosUnidos" required="">
+            <option value="">
+              Seleccione una opción
+            </option>
+            <option value="si">
+              Sí
+            </option>
+            <option value="no">
+              No
+            </option>
+          </select><br>
+          <br>
+          <div id="estatusPadreDiv" style="display:none;">
+            <label for="estatusPadre">Estatus de su padre en EU:</label><br>
+            <select id="estatusPadre" name="estatusPadre">
+                <option value="" disabled selected>
+                    -- Seleccione una opcion --
+                  </option>
+              <option value="residente">
+                Residente
+              </option>
+              <option value="ciudadano">
+                Ciudadano
+              </option>
+              <option value="indocumentado">
+                Indocumentado
+              </option>
+              <option value="no_inmigrante">
+                No inmigrante
+              </option>
+              <option value="otro">
+                Otro
+              </option>
+            </select><br>
+            <br>
+          </div><label for="apellidosMadre">Apellidos de su Madre:</label><br>
+          <input type="text" id="apellidosMadre" name="apellidosMadre" required=""><br>
+          <br>
+          <label for="nombresMadre">Nombre(s) de su Madre:</label><br>
+          <input type="text" id="nombresMadre" name="nombresMadre" required=""><br>
+          <br>
+          <label for="fechaNacimientoMadre">Fecha de nacimiento de su Madre:</label><br>
+          <input type="date" id="fechaNacimientoMadre" name="fechaNacimientoMadre" required=""><br>
+          <br>
+          <label for="enEstadosUnidosMadre">¿Se encuentra su Madre en Estados Unidos?</label><br>
+          <select id="enEstadosUnidosMadre" name="enEstadosUnidosMadre" required="">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no" selected>
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <div id="estatusMadreDiv" style="display:none;">
+            <label for="estatusMadre">Estatus de su madre en EU:</label><br>
+            <select id="estatusMadre" name="estatusMadre">
+                <option value="" disabled selected>
+                    -- Seleccione una opcion --
+                  </option>
+              <option value="residente">
+                Residente
+              </option>
+              <option value="ciudadano">
+                Ciudadano
+              </option>
+              <option value="indocumentado">
+                Indocumentado
+              </option>
+              <option value="no_inmigrante">
+                No inmigrante
+              </option>
+              <option value="otro">
+                Otro
+              </option>
+            </select><br>
+            <br>
+          </div>
+          <h3>Información de Empleo</h3><label for="ocu">Ocupación Principal:</label><br>
+          <input type="text" id="ocu" name="ocu" required=""><br>
+          <br>
+          <label for="puestoActual">Puesto que Usted tiene actualmente:</label><br>
+          <input type="text" id="puestoActual" name="puestoActual" required=""><br>
+          <br>
+          <label for="empresaActual">Nombre de la compañía para la cual trabaja actualmente:</label><br>
+          <input type="text" id="empresaActual" name="empresaActual" required=""><br>
+          <br>
+          <label for="jefeActual">Nombre de su jefe inmediato:</label><br>
+          <input type="text" id="jefeActual" name="jefeActual" required=""><br>
+          <br>
+          <label for="puestoJefe">Puesto de su jefe inmediato:</label><br>
+          <input type="text" id="puestoJefe" name="puestoJefe" required=""><br>
+          <br>
+          <label for="direccionEmpleo">Dirección de su EMPLEO Actual (COMPLETA con CP):</label><br>
+          <input type="text" id="direccionEmpleo" name="direccionEmpleo" required=""><br>
+          <br>
+          <label for="telefonoEmpresa">Número de teléfono de la empresa u oficina:</label><br>
+          <input type="tel" id="telefonoEmpresa" name="telefonoEmpresa" required=""><br>
+          <br>
+          <label for="fechaIngreso">Fecha de Ingreso:</label><br>
+          <input type="text" id="fechaIngreso" name="fechaIngreso" required=""><br>
+          <br>
+          <label for="sueldo">Sueldo mensual (en moneda local):</label><br>
+          <input type="text" id="sueldo" name="sueldo" required=""><br>
+          <br>
+          <label for="actividades">Describa sus actividades dentro de la empresa (500 caracteres):</label><br>
+          <textarea id="actividades" name="actividades" rows="5" maxlength="500" required=""></textarea><br>
+          <br>
+          <label for="empleoAnterior">¿Tuvo un empleo anterior?</label><br>
+          <select id="empleoAnterior" name="empleoAnterior">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="empresaAnterior">Nombre de la compañía:</label><br>
+          <input type="text" id="empresaAnterior" name="empresaAnterior"><br>
+          <br>
+          <label for="direccionAnterior">Dirección de la empresa anterior:</label><br>
+          <input type="text" id="direccionAnterior" name="direccionAnterior"><br>
+          <br>
+          <label for="telefonoAnterior">Teléfono de la empresa:</label><br>
+          <input type="tel" id="telefonoAnterior" name="telefonoAnterior"><br>
+          <br>
+          <label for="puestoAnterior">Título del puesto anterior:</label><br>
+          <input type="text" id="puestoAnterior" name="puestoAnterior"><br>
+          <br>
+          <label for="actividadesAnterior">Describa sus actividades (500 caracteres):</label><br>
+          <textarea id="actividadesAnterior" name="actividadesAnterior" rows="5" maxlength="500"></textarea><br>
+          <br>
+          <label for="institucion">Nombre de la última institución educativa:</label><br>
+          <input type="text" id="institucion" name="institucion" required=""><br>
+          <br>
+          <label for="direccionEscuela">Dirección (calle y número):</label><br>
+          <input type="text" id="direccionEscuela" name="direccionEscuela" required=""><br>
+          <br>
+          <label for="curso">Curso / Nombre de la Carrera:</label><br>
+          <input type="text" id="curso" name="curso" required=""><br>
+          <br>
+          <label for="fechaInicio">Fecha de asistencia (inicio):</label><br>
+          <input type="text" id="fechaInicio" name="fechaInicio" required=""><br>
+          <br>
+          <label for="fechaFin">Fecha de asistencia (término):</label><br>
+          <input type="text" id="fechaFin" name="fechaFin" required=""><br>
+          <br>
+          <h3>Información Consular</h3><label for="tribuClan">¿Pertenece usted a un clan o una tribu?</label><br>
+          <input type="text" id="tribuClan" name="tribuClan"><br>
+          <br>
+          <label for="lengua1">Nombre de la Lengua (1):</label><br>
+          <input type="text" id="lengua1" name="lengua1"><br>
+          <br>
+          <label for="lengua2">Nombre de la Lengua (2):</label><br>
+          <input type="text" id="lengua2" name="lengua2"><br>
+          <br>
+          <label for="viajes">¿Ha viajado usted a algún otro país dentro de los últimos 5 años?</label><br>
+          <select id="viajes" name="viajes">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="pais1">País visitado (1):</label><br>
+          <input type="text" id="pais1" name="pais1"><br>
+          <br>
+          <label for="pais2">País visitado (2):</label><br>
+          <input type="text" id="pais2" name="pais2"><br>
+          <br>
+          <label for="organizacion">¿Ha pertenecido, contribuido o trabajado en una organización profesional, social o caritativa?</label><br>
+          <select id="organizacion" name="organizacion">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="habilidades">¿Tiene usted alguna especialización o habilidades en armas de fuego, explosivos, o experiencia nuclear, biológica o química?</label><br>
+          <select id="habilidades" name="habilidades">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="militar">¿Alguna vez ha servido usted para la militar?</label><br>
+          <select id="militar" name="militar">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="paramilitar">¿Ha sido miembro o cómplice de una unidad paramilitar, grupo rebelde, guerrillero u organización insurgente?</label><br>
+          <select id="paramilitar" name="paramilitar">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <h3>Parte 1: Salud</h3><label for="enfermedad">¿Tiene usted una enfermedad contagiosa de importancia de salud pública?</label><br>
+          <select id="enfermedad" name="enfermedad">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="desordenMental">¿Tiene usted un desorden mental o físico que represente una amenaza para otros?</label><br>
+          <select id="desordenMental" name="desordenMental">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="drogadicto">¿Ha sido usted drogadicto o adicto?</label><br>
+          <select id="drogadicto" name="drogadicto">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <h3>Parte 2: Historial Criminal</h3><label for="detenido">¿Alguna vez ha sido detenido o condenado por un crimen?</label><br>
+          <select id="detenido" name="detenido">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="traficoHumanos">¿Ha estado implicado en el tráfico humano?</label><br>
+          <select id="traficoHumanos" name="traficoHumanos">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <h3>Parte 3: Seguridad</h3><label for="terrorismo">¿Ha sido parte de una organización terrorista?</label><br>
+          <select id="terrorismo" name="terrorismo">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <label for="genocidio">¿Ha participado en genocidio?</label><br>
+          <select id="genocidio" name="genocidio">
+            <option value="" disabled selected>
+                -- Seleccione una opcion --
+              </option>
+            <option value="no">
+              No
+            </option>
+            <option value="si">
+              Sí
+            </option>
+          </select><br>
+          <br>
+          <input type="submit" value="Enviar">
+        </form>
+        <form id="formVisa3" class="subform" name="formVisa3">
+          <h3>Evaluación de perfil</h3>
+            <fieldset>
+              <legend>*Información Personal*</legend> <label for="nombre">1. Nombre:</label> <input type="text" id="nombre" name="nombre" required=""><br>
+              <br>
+              <label for="ed">2. Edad:</label> <input type="number" id="ed" name="ed" required=""><br>
+              <br>
+              <label>3. Género:</label> <label for="masculino">Masculino</label> <input type="radio" id="femenino" name="genero" value="Femenino"> <label for="femenino">Femenino</label> <input type="radio" id="otro" name="genero" value="Otro"> <label for="otro">Otro (especificar)</label> <input type="text" id="especificar-genero" name="especificar-genero"><br>
+              <br>
+            </fieldset>
+            <fieldset>
+              <legend>*Educación y Ocupación*</legend> <label for="estudia-trabaja">1. ¿Estudias o trabajas? ¿Tienes algún negocio?</label> <select id="estudia-trabaja" name="estudia-trabaja">
+                <option value="" disabled selected>
+                    -- Seleccione una opcion --
+                  </option>
+                <option value="Estudio">
+                  Estudio
+                </option>
+                <option value="Trabajo">
+                  Trabajo
+                </option>
+                <option value="Negocio">
+                  Negocio
+                </option>
+                <option value="Ambos">
+                  Ambos
+                </option>
+                <option value="Ninguno">
+                  Ninguno
+                </option>
+              </select><br>
+              <br>
+              <label for="nivel-estudios">2. Si estudias, ¿en qué nivel?</label> <select id="nivel-estudios" name="nivel-estudios">
+                <option value="" disabled selected>
+                    -- Seleccione una opcion --
+                  </option>
+                <option value="Primaria">
+                  Primaria
+                </option>
+                <option value="Secundaria">
+                  Secundaria
+                </option>
+                <option value="Preparatoria">
+                  Preparatoria
+                </option>
+                <option value="Universitaria">
+                  Universitaria
+                </option>
+                <option value="Posgrado">
+                  Posgrado
+                </option>
+              </select><br>
+              <br>
+              <label for="ocupacion">3. Si trabajas, ¿cuál es tu ocupación?</label> <input type="text" id="ocupacion" name="ocupacion"><br>
+              <br>
+              <label for="experiencia">4. ¿Cuántos años de experiencia tienes en tu ocupación actual?</label> <input type="number" id="experiencia" name="experiencia"><br>
+              <br>
+            </fieldset>
+            <fieldset>
+              <legend>*Viaje*</legend> <label for="destino">1. ¿A dónde vas a viajar?</label> <input type="text" id="destino" name="destino" required=""><br>
+              <br>
+              <label for="llegada">2. ¿Dónde vas a llegar? (ciudad, aeropuerto, etc.)</label> <input type="text" id="llegada" name="llegada" required=""><br>
+              <br>
+              <label for="tiempo">3. ¿Cuánto tiempo te vas a quedar en tu destino?</label> <input type="text" id="tiempo" name="tiempo" required=""><br>
+              <br>
+              <label for="personas">4. ¿Con cuántas personas vas a viajar?</label> <input type="number" id="personas" name="personas" required=""><br>
+              <br>
+            </fieldset>
+            <fieldset>
+              <legend>*Finanzas*</legend> <label for="quien-paga">1. ¿Quién te paga el viaje?</label> <select id="quien-paga" name="quien-paga">
+                <option value="" disabled selected>
+                    -- Seleccione una opcion --
+                  </option>
+                <option value="Yo mismo">
+                  Yo mismo
+                </option>
+                <option value="Familia">
+                  Familia
+                </option>
+                <option value="Amigos">
+                  Amigos
+                </option>
+                <option value="Empresa">
+                  Empresa
+                </option>
+                <option value="Otro">
+                  Otro (especificar)
+                </option>
+              </select><br>
+              <br>
+              <label for="ingreso">2. ¿Cuál es tu ingreso mensual aproximado?</label> <input type="number" id="ingreso" name="ingreso" required=""><br>
+              <br>
+              <label for="presupuesto">3. ¿Cuál es tu presupuesto para el viaje?</label> <input type="number" id="presupuesto" name="presupuesto" required=""><br>
+              <br>
+            </fieldset>
+            <fieldset>
+              <legend>*Intereses y Pasatiempos*</legend> <label for="pasiones">1. ¿Cuál es tu pasión o interés principal?</label> <input type="text" id="pasiones" name="pasiones" required=""><br>
+              <br>
+              <label for="hobby">2. ¿Tienes algún hobby o actividad que te guste hacer en tu tiempo libre?</label> <input type="text" id="hobby" name="hobby"><br>
+              <br>
+            </fieldset>
+            <fieldset>
+              <legend>*Familia*</legend> <label for="familia-mexico">1. ¿Tu familia se encuentra en México? (Padres, hijos, hermanos, etc.)</label> 
+              <textarea id="familia-mexico" name="familia-mexico" required=""></textarea><br>
+              <br>
+              <label for="familiar-eeuu">2. ¿Tienes algún familiar en los Estados Unidos?</label> 
+              <textarea id="familiar-eeuu" name="familiar-eeuu" required=""></textarea><br>
+              <br>
+              <label for="residente">3. En caso de sí, ¿Es residente? ¿Turista?</label> 
+              <textarea id="residente" name="residente"></textarea><br>
+              <br>
+            </fieldset>
+            <fieldset>
+              <legend>*Otros*</legend> <label for="requisitos">1. ¿Tienes algún requisito especial para tu viaje (discapacidad, dieta, etc.)?</label> <input type="text" id="requisitos" name="requisitos"><br>
+              <br>
+              <label for="comentarios">2. ¿Tienes alguna pregunta o comentario adicional?</label> 
+              <textarea id="comentarios" name="comentarios"></textarea><br>
+              <br>
+            </fieldset><input type="submit" value="Guardar">
+        </form>
+      </div>
+    </div>
+    <div class="pestaña">
+      <h2>PASAPORTE</h2>
+      <div class="boton-container">
+        <button onclick="mostrarSubFormulario(4)">REQUISITOS</button> <button onclick="mostrarSubFormulario(5)">FORMULARIO</button>
+      </div>
+      <div class="formulario-container">
+        <form id="formPasaporte1" class="subform" name="formPasaporte1">
+          <h3>Requisitos</h3>
+          <ul>
+            <li>CURP</li>
+            <li>INE</li>
+            <li>Acta de Nacimiento</li>
+            <li>Hoja de cita</li>
+            <li>Hoja de pago</li>
+            <li>Comprobante de domicilio</li>
+            <li>Contancia de estudios(menor de edad)</li>
+          </ul>
+        </form>
+        <form id="formPasaporte2" class="subform" name="formPasaporte2">
+          <h2>Formulario pasaporte</h2>
+          <h3>Información Personal</h3><label for="nombreCompleto">Nombre completo:</label><br>
+          <input type="text" id="nombreCompleto" name="nombreCompleto" required=""><br>
+          <br>
+          <label for="telefono">Número de teléfono:</label><br>
+          <input type="tel" id="telefono" name="telefono" required=""><br>
+          <br>
+          <label for="lugarNacimiento">Lugar de nacimiento:</label><br>
+          <input type="text" id="lugarNacimiento" name="lugarNacimiento" required=""><br>
+          <br>
+          <label for="edad">Edad</label><br>
+          <input type="text" id="edad" name="edad" required=""><br>
+          <br>
+          <label for="estadoCivil">Estado civil:</label><br>
+          <select id="estadoCivil" name="estadoCivil" required="">
+            <option value="" disabled selected>
+              -- Seleccione su estado civil --
+            </option>
+            <option value="soltero">
+              Soltero(a)
+            </option>
+            <option value="casado">
+              Casado(a)
+            </option>
+            <option value="divorciado">
+              Divorciado(a)
+            </option>
+            <option value="viudo">
+              Viudo(a)
+            </option>
+          </select><br>
+          <br>
+          <h3>Datos de Identificación</h3><label for="claveElector">Clave de elector:</label><br>
+          <input type="text" id="claveElector" name="claveElector" placeholder="Ingrese su clave de elector"><br>
+          <br>
+          <label for="ocr">OCR:</label><br>
+          <input type="text" id="ocr" name="ocr" placeholder="Número OCR"><br>
+          <br>
+          <label for="cic">CIC:</label><br>
+          <input type="text" id="cic" name="cic" placeholder="Número CIC"><br>
+          <br>
+          <h3>Datos del Acta de Nacimiento</h3><label for="folio">Folio del acta de nacimiento:</label><br>
+          <input type="text" id="folio" name="folio" placeholder="Número de folio" required=""><br>
+          <br>
+          <label for="libro">Libro:</label><br>
+          <input type="text" id="libro" name="libro" placeholder="Número de libro" required=""><br>
+          <br>
+          <label for="oficialia">Oficialía:</label><br>
+          <input type="text" id="oficialia" name="oficialia" placeholder="Número de oficialía" required=""><br>
+          <br>
+          <label for="fechaRegistro">Fecha de registro:</label><br>
+          <input type="date" id="fechaRegistro" name="fechaRegistro" required=""><br>
+          <br>
+          <label for="entidadRegistro">Entidad de registro:</label><br>
+          <input type="text" id="entidadRegistro" name="entidadRegistro" placeholder="Ej. Ciudad de México" required=""><br>
+          <br>
+          <label for="curp">CURP:</label><br>
+          <input type="text" id="curp" name="curp" placeholder="Ingrese su CURP" maxlength="18" required=""><br>
+          <br>
+          <label for="oficina">Oficina de la cita:</label><br>
+          <input type="text" id="oficina" name="oficina" placeholder="Ej. Oficina Centro CDMX" required=""><br>
+          <br>
+          <label for="nombreContacto">Nombre del contacto:</label><br>
+          <input type="text" id="nombreContacto" name="nombreContacto" placeholder="Nombre de la persona de contacto" required=""><br>
+          <br>
+          <label for="telefonoContacto">Número de teléfono de contacto:</label><br>
+          <input type="tel" id="telefonoContacto" name="telefonoContacto" placeholder="Ej. 555-123-4567" required=""><br>
+          <br>
+          <input type="submit" value="Guardar">
+        </form>
+      </div>
+    </div>
+    <div class="pestaña">
+        <h2>Iniciar sesión como Administrador</h2>
+    <form id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    </div>
+  </div>
+  <footer>
+    <p>Síguenos <a href="https://www.facebook.com/profile.php?id=61563963274689" target="_blank">Danjor</a> <a href="https://www.instagram.com/danjor.tramites/" target="_blank">Danjor</a> <a href="tel:+527361121497">+52 736 112 1497</a><a href="tel:+527228035317">+52 722 803 5317</a> <a href="mailto:danjor_soporte@outlook.com">danjor_soporte@outlook.com</a></p>
+    <p>© 2024 Empresa de Trámites. Todos los derechos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
